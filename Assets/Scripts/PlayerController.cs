@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     public GameObject upPoint;
     public GameObject downPoint;
-    public static bool isAlive;
+    public bool isAlive;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,10 +37,5 @@ public class PlayerController : MonoBehaviour
                 rb.gravityScale *= -1;
             }
         }
-    }
-
-    public bool IsAlive()
-    {
-        return isAlive;
     }
 }

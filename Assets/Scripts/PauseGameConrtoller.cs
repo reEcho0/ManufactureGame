@@ -5,7 +5,7 @@ public class PauseGameConrtoller : MonoBehaviour
 {
     public GameObject pauseMenu;
     public PlayerController player;
-    public static bool isPaused;
+    public bool isPaused;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,7 +16,7 @@ public class PauseGameConrtoller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && player.IsAlive())
+        if (Input.GetKeyDown(KeyCode.Escape) && player.isAlive)
         {
             if (!isPaused)
             {
@@ -42,12 +42,7 @@ public class PauseGameConrtoller : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
     }
-
-    public bool IsPaused()
-    {
-        return isPaused;
-    }
-
+        
     public void GoToMainMenu()
     {
         isPaused = false;

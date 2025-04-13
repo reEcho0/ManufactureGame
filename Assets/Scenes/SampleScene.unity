@@ -2182,8 +2182,8 @@ MonoBehaviour:
   generatorPoint: {fileID: 1129518010}
   destroyPoint: {fileID: 1219138040}
   distanceBetween: 1
-  distanceMin: 4
-  distanceMax: 8
+  distanceMin: 6
+  distanceMax: 10
   platformsMamager:
   - {fileID: 480225512}
   - {fileID: 2060091976}
@@ -2696,8 +2696,8 @@ MonoBehaviour:
   generatorPoint: {fileID: 1129518010}
   destroyPoint: {fileID: 1219138040}
   distanceBetween: 1
-  distanceMin: 4
-  distanceMax: 8
+  distanceMin: 6
+  distanceMax: 10
   platformsMamager:
   - {fileID: 480225512}
   - {fileID: 2060091976}
@@ -2948,6 +2948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1396980459}
   player: {fileID: 1951132844}
+  isPaused: 0
 --- !u!1 &1638526954
 GameObject:
   m_ObjectHideFlags: 0
@@ -3664,13 +3665,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d8e5a72077f1bf429d060ce50f21c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 5
   isGround: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   upPoint: {fileID: 1375128906}
   downPoint: {fileID: 1002742570}
+  isAlive: 0
 --- !u!50 &1951132845
 Rigidbody2D:
   serializedVersion: 5

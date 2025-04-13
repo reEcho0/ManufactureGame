@@ -11,14 +11,7 @@ public class PauseAfterLossController : MonoBehaviour
     public Text scoreText, highscoreText;
     int score, highscore;
 
-    private void Awake()
-    {
-        instance = this;
-        if (PlayerPrefs.HasKey("SaveScore"))
-        { highscore = PlayerPrefs.GetInt("SaveScore"); }
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+        // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         endGame.SetActive(false);
@@ -27,11 +20,11 @@ public class PauseAfterLossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!player.IsAlive())
+        if (!player.isAlive)
         {
             endGame.SetActive(true);
             scoreText.text = gameScore.scoreText.text;
-            highscoreText.text = "Highscore: " + highscore;
+            highscoreText.text = gameScore.highscoreText.text;
             Time.timeScale = 0f;
         }
         
@@ -39,6 +32,8 @@ public class PauseAfterLossController : MonoBehaviour
 
     public void Restart()
     {
+        player.isAlive = true;
+        endGame.SetActive(false);
         Time.timeScale = 1f;
         SceneManager.LoadScene("SampleScene");
     }

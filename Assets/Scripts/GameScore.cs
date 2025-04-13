@@ -29,7 +29,7 @@ public class GameScore : MonoBehaviour
     {
         scoreText.text = "Score: " + score;
         highscoreText.text = "Highscore: " + highscore;
-        if (!pause.IsPaused() && player.IsAlive())
+        if (!pause.isPaused && player.isAlive)
             instance.AddScore();
     }
 
